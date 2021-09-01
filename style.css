@@ -321,7 +321,7 @@ footer{
 footer li{
     list-style: none;
 }
-.hotels figure figcaption i .star_grey{
+.star_grey{
     color: gray;
 }
 /* mobile */
