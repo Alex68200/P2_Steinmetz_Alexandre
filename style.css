@@ -26,6 +26,9 @@ nav{
     justify-content: space-between;
     margin-right: 90px;
 }
+figure figcaption .rising_star .star-grey{
+    color: lightgrey;
+}
 .navlink{
     display: flex;
     justify-content: flex-end;
@@ -63,7 +66,7 @@ h1{
 .geolocalisation{
     width: 280px;
     border: 1px solid #F2F2F2;
-    border-radius: 20px;
+    border-radius: 10px;
     overflow: hidden;
     display: inline-flex;
     flex-direction: row;
@@ -71,17 +74,20 @@ h1{
     justify-content: space-between;
     align-items: center;
 }
+.geolocalisation .search_logo{
+    display: none;
+}
 .geolocalisation i{
     background-color: #F2F2F2;
     margin: 0;
-    padding: 10px;
+    padding: 12px;
 }
 .geolocalisation button{
     background-color: #0065FC;
     color: white;
     border-style: none;
     margin: 0;
-    padding: 9px;
+    padding: 12px;
     cursor: pointer;
 }
 .geolocalisation input{
@@ -150,6 +156,8 @@ main section{
     background-color:#F2F2F2;
     padding: 20px;
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
 }
 main aside{
     width: 30%;
@@ -205,7 +213,7 @@ main aside{
 }
 .viewMore{
     font-weight: bold;
-    margin-top: 100px;
+    margin-top: 30px;
 }
 .hosting_popular h2{
     display: flex;
@@ -217,18 +225,26 @@ main aside{
     height: 144px;
     justify-content: space-between;
     background-color: white;
-    padding: 20px;
     border-radius: 15px;
+    margin: 25px 20px;
+    padding: 5px;
 }
 .hosting_popular figure .hotel_popular_img{
     overflow: hidden;
     width: 40%;
     border-radius: 15px 0 0 15px;
+    
+}
+.hosting_popular figure .hotel_popular_img a{
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .hosting_popular figure .hotel_popular_img a img{
     flex-shrink: 0;
+    height: 100%;
     min-width: 100%;
     min-height: 100%;
 }
@@ -251,61 +267,64 @@ main aside{
 .activity{
     margin: 35px;
 }
-.bloc_activity{
+.colonnes{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 85%;
+    justify-content: space-between;
+    /* border: 2px solid blue; */
 }
-.bloc_activity figure{
+.colonne{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 23%;
+    /* border: 2px solid green; */
+}
+
+.colonne figure{
     box-shadow:0 0 20px #0000002e;
     border-radius: 16px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 0;
+    margin: 0;
+    width: 100%;
+    /* border: 2px solid red; */
 }
-.bloc_activity .activity_img{
+.colonne .activity_img{
     display: flex;
+    justify-content: center;
+    align-content: center;
     align-items: center;
-}
-.simple{
-    max-width: 30%;
-}
-.double{
-    max-width: 30%;
-}
-.double .activity_img{
-    max-height: 235px;
     overflow: hidden;
 }
-.simple .activity_img{
-    max-height: 445px;
-    overflow: hidden;
+.colonne .activity_img a img{
+    object-fit: cover;
 }
-.simple figure{
-    height: 445px;
+.double .activity_img a img{
+    max-width: 100%;
 }
-.double figure{
+
+.colonne figure{
+    height: 450px;
+}
+.colonne #premiere{
     height: 235px;
 }
-#deuxieme{
+.colonne #deuxieme{
     height: 165px;
-    margin-top: 45px;
 }
-#troisieme{
+.colonne #troisieme{
     height: 195px;
 }
-#quatrieme{
+.colonne #quatrieme{
     height: 210px;
-    margin-top: 40px;
 }
 footer{
     width: 100%;
     background-color: #F2F2F2;
+    padding-top: 20px;
 }
 .footerblocs{
     display: flex;
@@ -334,6 +353,9 @@ footer li{
         width: 100%;
         margin: auto;
     }
+    main{
+        flex-direction: column-reverse;
+    }
     nav{
         flex-direction: column;
         position: relative;
@@ -351,8 +373,17 @@ footer li{
     }
     .signup{
         position: absolute;
-        top: 0;
+        top: 35px;
         right: 0;
+    }
+    .geolocalisation button{
+        display: none;
+    }
+    .geolocalisation .search_logo{
+        display: initial;
+        background-color: #0065FC;
+        color: white;
+        border-radius: 10px;
     }
     .filtres{
         flex-direction: column;
@@ -360,7 +391,7 @@ footer li{
         align-items: flex-start;
     }
     .filtres h2{
-        margin-bottom: 0;
+        margin-bottom: 5px;
     }
     .filtres ul{
         padding-left: 0;
@@ -404,18 +435,32 @@ footer li{
         width: 100%;
         margin: 10%;
     }
-    .simple{
-        max-width: 100%;
+    .colonnes{
+        flex-direction: column;
     }
-    .simple figure{
-        max-height: 235px;
+    .colonnes figure{
+        height: 190px;
+        margin-top: 25px;
+        margin-left: 20px;
+    }
+    .simple{
+        width: 100%;
     }
     .double{
-        max-width: 100%;
+        width: 100%;
     }
-    #deuxieme{
-        height: 235px;
-        margin-top: 14px;
+    .colonnes #premiere{
+        height: 190px;
+    }
+    .colonnes #deuxieme{
+        height: 190px;
+    }
+    .colonnes #troisieme{
+        height: 190px;
+    }
+    .colonnes #quatrieme{
+        height: 190px;
+        margin-bottom: 45px;
     }
     footer{
         width: 110%;
