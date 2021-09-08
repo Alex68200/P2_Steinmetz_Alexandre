@@ -15,7 +15,6 @@ a{
     cursor: pointer;
 }
 header{
-    width: 98%;
     margin: 35px;
     margin-top: 0;
 }
@@ -363,7 +362,8 @@ footer li{
         flex-wrap: wrap;
         align-content: space-between;
         align-items: flex-start;
-        margin-right: 0;
+        margin: 0 -20px;
+        border-bottom: 2px solid lightgray;
     }
     .navlink {
         position: relative;
