@@ -3,18 +3,17 @@
     src: url("./Raleway/Raleway-VariableFont_wght.ttf");
     font-weight: 100 1000;
   }
-  
 body{
     font-size: 14px; 
     font-family: 'Raleway', sans-serif;
     margin-top: 0px;
+    width: 100%;
 }
-a {
+a{
     text-decoration: none;
     color: inherit;
     cursor: pointer;
 }
-
 header{
     width: 98%;
     margin: 35px;
@@ -119,6 +118,7 @@ h1{
     border-left: none;
     padding-right: 20px;
     font-weight: bold;
+    cursor: pointer;
 }
 .filtres ul :hover{
     color: #0065FC;
@@ -355,6 +355,7 @@ footer li{
     }
     main{
         flex-direction: column-reverse;
+        margin: 0;
     }
     nav{
         flex-direction: column;
@@ -401,12 +402,9 @@ footer li{
     .filtres ul li{
         font-size: 18px;
     }
-    main{
-        flex-direction: column-reverse;
-        margin: 0;
-    }
     .hosting_popular{
         width: 100%;
+        padding: 0;
     }
     .hosting_popular figure{
         margin: 10px 0;
@@ -414,6 +412,7 @@ footer li{
     .hebergements{
         width: 100%;
         background-color: white;
+        padding: 0;
     }
     .hotels{
         flex-direction: column;
@@ -441,7 +440,6 @@ footer li{
     .colonnes figure{
         height: 190px;
         margin-top: 25px;
-        margin-left: 20px;
     }
     .simple{
         width: 100%;
