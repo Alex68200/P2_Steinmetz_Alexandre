@@ -90,6 +90,8 @@ h1{
 }
 .geolocalisation input{
     border: none;
+    margin-left: 5px;
+    font-weight: bolder;
 }
 .geolocalisation input::placeholder{
     color: black;
@@ -213,6 +215,7 @@ main aside{
 .viewMore{
     font-weight: bold;
     margin-top: 30px;
+    font-size: 16px;
 }
 .hosting_popular h2{
     display: flex;
@@ -297,12 +300,18 @@ main aside{
     align-content: center;
     align-items: center;
     overflow: hidden;
+    width: 100%;
+}
+.colonne .activity_img a{
+    width: 100%;
 }
 .colonne .activity_img a img{
     object-fit: cover;
 }
 .double .activity_img a img{
     max-width: 100%;
+    width: 100%;
+    height: auto;
 }
 
 .colonne figure{
@@ -346,8 +355,12 @@ footer li{
 @media screen and (max-width: 870px)
 {
     header{
-        margin: 20px;
+        margin: 0;
     }
+    header section {
+        margin: 0 20px;
+    }
+
     body {
         width: 100%;
         margin: auto;
@@ -356,28 +369,44 @@ footer li{
         flex-direction: column-reverse;
         margin: 0;
     }
+    #logo {
+        margin: 35px 0 0 20px;
+    }
     nav{
         flex-direction: column;
         position: relative;
         flex-wrap: wrap;
         align-content: space-between;
         align-items: flex-start;
-        margin: 0 -20px;
         border-bottom: 2px solid lightgray;
+        width: 100%;
     }
     .navlink {
         position: relative;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 0;
     }
+    .navlink li a {
+        font-size: 16px;
+    } 
     .navlink li :hover {
         border-top: none;
-        border-bottom: 2px solid blue;
     }
-    .hebergementsHeader{
+    .navlink .hebergementsHeader,
+    .navlink .activiteHeader {
+        width: 50%;
+        padding-bottom: 20px;
         margin-left: 0px;
+            text-align: center;
+    }
+    .navlink .hebergementsHeader:hover,
+    .navlink .activiteHeader:hover {
+        border-bottom: 2px solid blue;
     }
     .signup{
         position: absolute;
-        top: 35px;
+        top: -60px;
         right: 20px;
     }
     .geolocalisation button{
@@ -407,24 +436,35 @@ footer li{
     }
     .hosting_popular{
         width: 100%;
-        padding: 0;
+        padding: 0 0 20px 0;
+    }
+    .hosting_popular h2{
+        padding: 0 20px;
     }
     .hosting_popular figure{
-        margin: 10px 0;
+        margin: 10px 20px;
     }
     .hebergements{
         width: 100%;
         background-color: white;
         padding: 0;
+        margin: 20px 0;
+    }
+    .hebergements h2{
+        margin: 10px 20px;
     }
     .hotels{
         flex-direction: column;
+        margin: 0 20px;
     }
     .hotels figure{
         margin: 5px 0;
     }
     .hebergements figure{
         max-width: 100%;
+    }
+    .viewMore {
+        margin-left: 15px ;
     }
     .activity{
         margin: 0;
@@ -435,10 +475,11 @@ footer li{
     .bloc_activity{
         flex-direction: column;
         width: 100%;
-        margin: 10%;
+        margin: 0 20px;
     }
     .colonnes{
         flex-direction: column;
+        margin: 0 20px;
     }
     .colonnes figure{
         height: 190px;
